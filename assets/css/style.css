@@ -81,15 +81,3 @@ body {
 .cell:hover::before {
     transform: scale(1.1);
 }
-
-.cell.x::before {
-    content: "";
-    color: magenta;
-    text-shadow: 0 0 10px magenta, 0 0 20px magenta, 0 0 30px magenta;
-}
-
-.cell.o::before {
-    content: "";
-    color: lime;
-    text-shadow: 0 0 10px lime, 0 0 20px lime, 0 0 30px lime;
-}

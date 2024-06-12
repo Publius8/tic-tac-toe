@@ -67,17 +67,35 @@ function clean() {
         cell.style.backgroundColor = ""; // Reset the background color
     }
 }
-
+let head = document.createElement("h1");
 function updateScore(winner) {
     if (winner === 'X') {
         scoreX++;
         playreX.textContent = "Score X: " + scoreX;
-    }
-    if (winner === 'O') {
+        if (scoreX === 5) {
+            alert("Player X wins the game with 5 points! Refresh to start again.");
+            mainContainer.innerHTML = " ";
+            head.textContent = "Player X wins the game with 5 points! Refresh to start again.";
+            head.style.color = "cyan";
+            head.style.fontSize = "25px";
+            head.style.textAlign = "center";
+            document.body.appendChild(head);
+        }
+    } else if (winner === 'O') {
         scoreO++;
         playerO.textContent = "Score O: " + scoreO;
+        if (scoreO === 5) {
+            alert("Player O wins the game with 5 points! Refresh to start again.");
+            mainContainer.innerHTML = " ";
+            head.textContent = "Player O wins the game with 5 points! Refresh to start again.";
+            head.style.color = "cyan";
+            head.style.fontSize = "25px";
+            head.style.textAlign = "center";
+            document.body.appendChild(head);
+        }
     }
 }
+
 
 function colorWinningCells(winningCombination) {
     for (let index of winningCombination) {
