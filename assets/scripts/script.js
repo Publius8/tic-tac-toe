@@ -2,6 +2,14 @@ let playreX = document.querySelector("#playreX");
 let playerO = document.querySelector("#playerO");
 let cells = document.querySelectorAll(".cell");
 
+document.addEventListener("DOMContentLoaded", function() {
+    const audioplay = document.querySelector("#audioplay");
+    audioplay.currentTime = 0;
+    audioplay.play();
+});
+
+
+
 let scoreX = 0;
 let scoreO = 0;
 
