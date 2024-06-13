@@ -2,11 +2,11 @@ let playreX = document.querySelector("#playreX");
 let playerO = document.querySelector("#playerO");
 let cells = document.querySelectorAll(".cell");
 
-document.addEventListener("DOMContentLoaded", function() {
-    const audioplay = document.querySelector("#audioplay");
-    audioplay.currentTime = 0;
-    audioplay.play();
-});
+// document.addEventListener("DOMContentLoaded", function() {
+//     const audioplay = document.querySelector("#audioplay");
+//     audioplay.currentTime = 0;
+//     audioplay.play();
+// });
 
 
 
@@ -53,7 +53,7 @@ function isVictory(cells) {
             cells[comb[1]].textContent === cells[comb[2]].textContent &&
             cells[comb[0]].textContent !== ''
         ) {
-            return comb; // Return the winning combination
+            return comb;
         }
     }
 
@@ -72,7 +72,7 @@ function isDraw(cells) {
 function clean() {
     for (let cell of cells) {
         cell.textContent = "";
-        cell.style.backgroundColor = ""; // Reset the background color
+        cell.style.backgroundColor = "";
     }
 }
 let head = document.createElement("h1");
